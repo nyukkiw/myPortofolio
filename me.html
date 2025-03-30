@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portofolio</title>
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <!-- end font -->
+
+        <!-- icon -->
+        <script src="https://unpkg.com/feather-icons"></script>
+        <!-- end icon -->
+
+        <!-- style css -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+
+    <body>
+        <div class="container-sideBar">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        
+           
+        <!-- start-sideNavbar -->
+       <div class="sideNavbar">
+        <!-- photoProfile -->
+            <div class="photoProfile">
+                <img src="picture/WhatsApp Image 2025-03-29 at 13.34.21_11ef9fe3.jpg" alt="banyu">
+            </div> 
+        <!--end photoprofile  -->
+
+            <!-- me desc -->
+            <h3>Valentino Banyu Ampar Paraya</h3>
+            <p>Front-end developer</p>
+            <!-- end me desc -->
+
+            <!-- menu navbar -->
+            <div class="navbar-menu">
+                <a href="#" onclick="showContent('home')">Home</a>
+                <a href="#" onclick="showContent('about')">About</a>
+                <a href="#" onclick="showContent('skills')">Skills</a>
+                <a href="#" onclick="showContent('education')">Education</a>
+                <a href="#" onclick="showContent('experience')">Experience</a>
+                <a href="#" onclick="showContent('contact')">Contact</a>
+            </div>
+            <!-- menu navbar -->
+        
+            <!--footer  -->
+            <div class="buttomDesc">
+               
+                <p>Created with <i data-feather="heart"></i> by banyu </p>
+              
+            </div>
+            <!--end footer -->
+
+        </div>
+    </div>
+        <!-- end-sideNavbar -->
+
+        <!-- content -->
+         <div class="content">
+           
+            <section id="home" class="section">
+                <p>
+                    <span class="hello">Hello </span>
+                     <span class="everyone">everyone</span>
+                     <span class="coma">,</span> 
+                     <span class="welcome">welcome </span>
+                     <span class="to">to </span>
+                     <span class="my">my</span> 
+                    <span class="gallery">gallery</span>    
+                </p>
+
+            </section>
+
+            <section id="about" class="section" style="display: none;">
+                 <h1>About me</h1>
+                    <img src="picture/20230805_101037 (2) (1).jpg" alt="my style 3">
+               
+                  
+                    <p>
+                        Hello, my name is Valentino banyu ampar paraya, you can call me banyu. I'm from pontianak kalimantan barat.
+                        I am currently studying Computer Science at Sanata Dharma University in Yogyakarta, Indonesia. I am deeply passionate about front-end development and am continuously learning to improve my skills. If you hire me for your front-end projects, I will ensure your satisfaction. Please forgive any imperfections as I am still growing in this field. You are welcome to pay any amount you deem fair—or even nothing if you're unsatisfied with my work.This portfolio will be regularly updated throughout my academic journey. Your trust and happiness are my top priorities!
+                    </p>
+            </section>
+
+
+            <section id="skills" class="section" style="display: none;">
+                <h1>Skills I've mastered so far</h1>
+              
+                <img src="picture/HTML5_Logo.svg" alt="html-logo" class="htmlLogo" onclick="showMessage('HTML','Proficient in HTML')">
+                <img src="picture/CSS3_logo.svg.png" alt="css-logo" class="cssLogo" onclick="showMessage('CSS','Proficient in CSS')">
+                <img src="picture/Unofficial_JavaScript_logo_2.svg.png" alt="js-logo" class="jsLogo" onclick="showMessage('JS','Currently, my HTML/CSS skills outpace my JavaScript, but Im actively improving my JS abilities through projects and study ')">
+            </section>
+            
+            <div id="popUp" class="messagePopup"></div>
+
+
+            <section id="education" class="section" style="display: none;">
+                <h1>education</h1>
+
+                <a href="https://pmb.usd.ac.id/" target="_blank">
+                    <img src="picture/usd.png" alt="sanataDharma">
+                 </a>
+
+                <p>
+                    I am presently enrolled as an active student at Sanata Dharma University, 
+                    pursuing a degree in Computer Science.
+                </p>
+
+            </section>
+
+            <section id="experience" class="section" style="display: none;">
+               <h1>experience</h1>
+               <p>While I don't have any formal work experience yet, I consider every project I work on as valuable experience. I truly appreciate your guidance in helping me develop my skills. This information will be continuously updated as I gain more experience.</p>
+                
+            </section>
+
+            <section id="contact" class="section" style="display: none;">
+               <h1>Contact</h1>
+               <div class="icon-container">
+                <a href="https://www.instagram.com/vlnbanyu/" target="_blank" class="icon">
+                    <i data-feather="instagram"></i>
+                </a>
+                <a href="https://github.com/nyukkiw" target="_blank" class="icon">
+                    <i data-feather="github"></i>
+                </a>
+                  <!-- salin email code -->
+                      <a href="#" onclick="copyEmail(event)" class="icon">
+                          <i data-feather="mail"></i>
+                        </a>
+                        <span id="tooltip" class="tooltip">Tersalin!</span>
+
+                     <a href="https://www.linkedin.com/in/vln-banyuk-756752311/" target="_blank" class="icon">
+                        <i data-feather="linkedin"></i>
+                     </a>   
+               </div>
+               <p>Here’s my GitHub, Instagram, LinkedIn, and email. Feel free to reach out or follow my work!</p>
+
+            </section>
+
+
+         </div>
+        <!--end content  -->
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </body>
+
+
+
+    <!-- icon -->
+    <script>
+        feather.replace();
+    </script>
+    <!-- end icon -->
+
+
+
+
+    <script src="biodata.js"></script>
+
+
+
+
+
+
+
+</html>

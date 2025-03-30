@@ -1,0 +1,503 @@
+:root{
+    --primary: hwb(157 84% 10%);
+    --bg: aquamarine;
+}
+
+*{
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+
+
+
+
+/* container */
+.container-sideBar{
+    position: fixed;
+    display: flex;
+    
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+#hamburger-menu{
+display: none;
+
+}
+/* media queries */
+
+/* laptop */
+@media (max-width:1366px){
+    html{
+        font-size: 75%;
+    }
+}
+/* end laptop */
+
+/* tablet */
+@media (max-width:768px){
+    html{
+        font-size: 62.5%;
+    }
+    #home{
+       text-align: center;
+        
+    
+    }
+/* .content {
+        margin-left: 250px; 
+        width: calc(100% - 250px);
+} */
+#about img {
+        margin: 1rem auto; /* Tetap di tengah */
+ }
+#hamburger-menu{
+    display: block; /* Lebih baik dari inline-block */
+    position: fixed;
+    top: 20px;
+   right: 10px;
+    z-index: 1000;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.sideNavbar{
+    position: fixed; /* Lebih baik dari absolute */
+    top: 0;
+    left: -100%; /*Perbaiki: tambah  */
+    width: 250px; /* Atur lebar sidebar */
+    height: 100vh;
+    background: var(--primary);
+    transition: 0.3s ease-in-out; /* Animasi lebih smooth */
+    z-index: 999;
+    overflow-y: auto; /* Scroll jika konten panjang */
+    /* new */
+    min-height: -webkit-fill-available; /* Solusi untuk mobile browser */
+
+}
+
+.sideNavbar.active {
+    left: 0;
+  }
+
+}
+/* end tablet */
+
+/* mobile */
+@media (max-width:450px){
+    html{
+        font-size: 55%;
+    }
+}
+/* end mobile */
+
+/* end container */
+
+
+/* side-navbar */
+.sideNavbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    font-size: medium;
+    padding: 0.5rem;
+    box-shadow: 0 10px 10px rgba(12, 0, 150, 0.3);
+
+}
+
+.photoProfile img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: solid black;
+}
+
+.navbar-menu a{
+    color: #000;
+    display: block;
+    padding-top: 2rem;
+    transition: 0.2s;
+    text-align: center;
+}
+
+.navbar-menu a:hover{
+    color: rgb(5, 157, 228)
+}
+
+.navbar-menu a::after{
+    content: " ";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid black;
+    transform: scaleX(0);
+    transition: 0.3s linear;
+   
+}
+
+.navbar-menu a:hover::after{
+    transform: scaleX(0.3);
+}
+
+.buttomDesc{
+    padding-top: 2rem;
+}
+
+
+
+
+
+
+/* end side navbar */
+
+
+
+/* start content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 2;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translate(-50%, -50%); }
+    to { opacity: 0; transform: translate(-50%, -55%); }
+}
+
+@keyframes blink{
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0;
+        transform: scale(0.98);
+      }
+}
+
+@keyframes bounce{
+    0% {
+        transform: translateY(0);
+      }
+      30% {
+        transform: translateY(-20px); 
+      }
+      50% {
+        transform: translateY(0);     
+      }
+      65% {
+        transform: translateY(-10px); 
+      }
+      80% {
+        transform: translateY(0);     
+      }
+      100% {
+        transform: translateY(0);
+      }
+}
+
+
+
+
+.content{
+   position: relative;
+    z-index: 1; 
+   margin-left: 300px;
+   /* new */
+   /* margin-left: 0;
+   padding: 15px;
+   width: 100%; */
+   /* end new */
+   padding: 20px;
+   min-height: 100vh;
+
+}
+
+
+/* hamburger */
+.hamburger{
+    margin-right: 300px;
+    padding: 0.5rem;
+    margin-bottom: 30px;
+}
+/* end hamburger */
+
+/* section */
+/* home */
+#home{
+    margin-left: 400px;
+    
+
+}
+#home p{
+    padding-top: 300px 
+}
+.hello{
+    animation: fadeIn 1s ease-in-out ;
+}
+.everyone{
+    animation: fadeIn 2s ease-in-out ;
+}
+.coma{
+    animation: fadeIn 3s ease-in-out ;
+}
+.welcome{
+    animation: fadeIn 4s ease-in-out ;
+}
+.to{
+    animation: fadeIn 5s ease-in-out ;
+}
+.my{
+    animation: fadeIn 6s ease-in-out ;
+}
+.gallery{
+    animation: fadeIn 7s ease-in-out ;
+}
+/* end home */
+
+
+/* about */
+#about{
+    animation: fadeIn 1s forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+#about P{
+    columns: 2;
+    column-gap: 40px;
+    position: relative;
+    animation: fadeIn 1s forwards;
+    padding: 2rem;
+
+}
+#about img{
+    position: relative;
+    margin-top: 1rem;
+    margin-left:380px;
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+    border: solid black;
+    z-index: -1;
+    animation: fadeIn 0.5s forwards;
+}
+#about h1{
+    padding-top: 1rem;
+    padding-left: 520px;
+    animation: fadeIn 0.2s forwards;
+}
+/* end about */
+
+
+/* skills */
+#skills{
+    animation: fadeIn 1s forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#skills h1{
+    padding-top: 1rem;
+    padding-left: 450px;
+}
+#popUp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, 0);
+    background: rgba(0,0,0,0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    
+    /* Animasi */
+    opacity: 0;
+    visibility: hidden;
+    transition: 
+        opacity 0.3s ease-out,
+        visibility 0.3s ease-out,
+        transform 0.3s ease-out;
+
+        /* animation: fadeIn 0.3s forwards; */
+      
+}
+
+#popUp.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+
+.htmlLogo{
+  animation: bounce 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px #e34c26);
+  padding: 2rem;
+  /* margin-left: 300px; */
+  z-index: 50;
+  
+}
+
+
+.cssLogo{
+  animation: bounce 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px #264de4);
+  padding: 2rem;
+  /* margin-left: 300px; */
+}
+
+.jsLogo{
+    animation: bounce 7s ease-in-out infinite;
+    filter: drop-shadow(0 0 8px #f7df1e);
+    padding: 2rem;
+    /* margin-left: 300px; */
+}
+
+#skills img{
+    cursor: pointer;
+    transition: transform 0.2s;
+    grid-column: auto;
+    column-gap: 40px;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-left: 100px;
+    margin-top: 100px;
+   
+}
+/* end skills */
+
+/* edu */
+#education{
+    animation: fadeIn 1s forwards;
+    display: flex;
+    align-items: center; 
+    text-align: center;
+}
+#education h1{
+    
+    padding: 1rem;
+}
+#education img{
+    width: 300px;
+    height: 300px;
+}
+#education a{
+    display: inline-block;
+    position: relative;
+    z-index: 99999;
+}
+#education p{
+  
+    position: relative;
+    animation: fadeIn 1s forwards;
+    padding: 2rem;
+    
+}
+/* end edu */
+
+/*expe*/
+#experience{
+    animation: fadeIn 1s forwards;
+   text-align: center;
+}
+#experience p{
+   
+    position: relative;
+    animation: fadeIn 1s forwards;
+    
+    padding: 2rem;
+}
+#experience h1{
+    padding: 1rem;
+   
+}
+/* end expe */
+
+/* contact */
+#contact{
+    animation: fadeIn 1s forwards;
+   text-align: center;
+    
+}
+.icon-container {
+    display: flex;
+    justify-content: center; /* Pusatkan ikon horizontal */
+    gap: 20px; /* Jarak antar ikon */
+    padding: 1rem;
+  }
+#contact h1{
+    text-align: center;
+}
+#contact a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Ukuran lebih realistis untuk ikon */
+    height: 50px;
+    border-radius: 50%;
+    transition: background 0.3s;
+    
+    
+}
+.icon svg {
+    width: 100px; /* Sesuaikan ukuran */
+    height: 100px;
+  }
+
+/* email */
+  .tooltip {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  /* end-email */
+
+
+/* end contact */
+
+/*end-section */
+/* end content */
