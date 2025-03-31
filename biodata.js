@@ -15,25 +15,25 @@ function showContent(sectionId) {
 function showMessage(title,desc){
     const popup = document.getElementById('popUp');
     
-    // 1. Hentikan timeout sebelumnya jika ada
+    
     if (popup.timeoutId) {
         clearTimeout(popup.timeoutId);
     }
     
-    // 2. Update konten popup
+    
     popup.innerHTML = `
         <span class="close-btn" onclick="hidePopup()">×</span>
         <h3>${title}</h3>
         <p>${desc}</p>
     `;
     
-    // 3. Tampilkan dengan animasi
+    
     popup.style.display = 'block';
     setTimeout(() => {
         popup.classList.add('show');
     }, 10);
     
-    // 4. Set timeout untuk auto-hide
+    
     popup.timeoutId = setTimeout(() => {
         hidePopup();
     }, 5000);
@@ -45,7 +45,7 @@ function hidePopup() {
     
     setTimeout(() => {
         popup.style.display = 'none';
-    }, 300); // Sesuaikan dengan durasi fadeOut
+    }, 300); 
 }
 
 //salin email v2
