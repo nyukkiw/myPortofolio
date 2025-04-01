@@ -1,6 +1,8 @@
 :root{
-    --primary: hwb(157 84% 10%);
-    --bg: aquamarine;
+    --primary:rgb(113, 101, 101) ;
+    --bg: hwb(157 84% 10%);
+    
+    
 }
 
 *{
@@ -77,7 +79,7 @@ display: none;
 }
 
 .navbar-menu a:hover{
-    color: rgb(5, 157, 228)
+    color: white;
 }
 
 .navbar-menu a::after{
@@ -470,6 +472,7 @@ display: none;
         font-size: 62.5%;
     }
     #hamburger-menu{
+        color: #000;
         display: block; 
         position: fixed;
         top: 20px;
@@ -480,6 +483,9 @@ display: none;
         cursor: pointer;
         pointer-events: auto !important;
         
+    }
+    #hamburger-menu :hover{
+        color: red;
     }
     .container-sideBar{
         position: fixed;
@@ -555,13 +561,14 @@ display: none;
   
 }
 #skills img{
-   
+   margin-right: 100px;
     width: 200px;
     height: 200px;
 }
-#skills h1{
-    margin-left: 100px;
+#popUp{
+    left: 40%;
 }
+
 /* end skills */
 
 

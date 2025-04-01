@@ -86,5 +86,13 @@ const sideNav=document.querySelector('.sideNavbar');
 document.querySelector('#hamburger-menu').onclick=()=>{
     sideNav.classList.toggle('active');
 }
+
+// menghilangkan hamburger menu dengan klik diluar hamburger menu
+const hamburger=document.querySelector('#hamburger-menu');
+document.addEventListener('click',function(e) {
+    if(!hamburger.contains(e.target)&&!sideNavbar.contains(e.target)){
+        sideNavbar.classList.remove('active');
+    }
+});
 // end hambuger menu
 
