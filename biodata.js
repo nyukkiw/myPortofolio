@@ -90,8 +90,8 @@ document.querySelector('#hamburger-menu').onclick=()=>{
 // menghilangkan hamburger menu dengan klik diluar hamburger menu
 const hamburger=document.querySelector('#hamburger-menu');
 document.addEventListener('click',function(e) {
-    if(!hamburger.contains(e.target)&&!sideNavbar.contains(e.target)){
-        sideNavbar.classList.remove('active');
+    if(!hamburger.contains(e.target)&&!sideNav.contains(e.target)){
+        sideNav.classList.remove('active');
     }
 });
 // end hambuger menu

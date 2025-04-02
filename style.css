@@ -1,6 +1,6 @@
 :root{
     --primary:rgb(113, 101, 101) ;
-    --bg: hwb(157 84% 10%);
+    --bg: hwb(160 97% 2%);
     
     
 }
@@ -308,7 +308,7 @@ display: none;
 .close-btn {
     position: absolute;
     top: 5px;
-    right: 10px;
+    right: 5px;
     cursor: pointer;
     font-size: 1.2em;
 }
@@ -471,6 +471,9 @@ display: none;
     html{
         font-size: 62.5%;
     }
+    #hamburger-menu:active {
+        color: red ;
+    }
     #hamburger-menu{
         color: #000;
         display: block; 
@@ -484,9 +487,10 @@ display: none;
         pointer-events: auto !important;
         
     }
-    #hamburger-menu :hover{
-        color: red;
-    }
+    
+
+   
+
     .container-sideBar{
         position: fixed;
         display: flex;
