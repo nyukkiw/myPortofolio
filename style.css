@@ -340,6 +340,12 @@ display: none;
    
 }
 
+.twLogo{
+    animation: bounce 8s ease-in-out infinite;
+    filter: drop-shadow(0 0 8px rgb(101, 123, 211));
+    padding: 2rem;
+}
+
 #skills img{
     cursor: pointer;
     transition: transform 0.2s;
