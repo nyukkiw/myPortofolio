@@ -191,7 +191,7 @@ display: none;
     align-items: center; 
 
 }
-#home p{
+#home{
     padding-top: 300px 
 }
 .hello{
@@ -214,6 +214,18 @@ display: none;
 }
 .gallery{
     animation: fadeIn 7s ease-in-out ;
+}
+.desc{
+    animation: fadeIn 3.5s ease-in-out;
+}
+.html{
+    filter: drop-shadow(0 0 8px #e34c26);
+}
+.css{
+    filter: drop-shadow(0 0 8px #264de4);
+}
+.js{
+    filter: drop-shadow(0 0 8px #f7df1e);
 }
 /* end home */
 
