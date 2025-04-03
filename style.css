@@ -245,7 +245,7 @@ display: none;
     margin: 1rem auto;
     align-items: center;
     width: 400px;
-    height: 400px;
+    height: 450px;
     border-radius: 10%;
     border: solid black;
     z-index: -1;
@@ -557,7 +557,7 @@ display: none;
 #about img {
        text-align: center;
        width: 200px;
-       height: 200px;
+       height: 230px;
  }
  #about P{
     font-size: 13px;
