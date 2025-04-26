@@ -40,6 +40,7 @@ function showMessage(title,desc){
 }
 
 function hidePopup() {
+    
     const popup = document.getElementById('popUp');
     popup.classList.remove('show');
     
